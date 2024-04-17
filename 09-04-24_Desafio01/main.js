@@ -16,12 +16,12 @@ class ProductManager {
         }else{
         const product = {
             id: this.#getIdMax() + 1,
-            title: this.title,
-            description: this.description,
-            price: this.price,
-            thumbnail: this.thumbnail,
-            code: this.code,
-            stock: this.stock
+            title: title,
+            description: description,
+            price: price,
+            thumbnail: thumbnail,
+            code: code,
+            stock: stock
         };
         this.products.push(product);
     }
@@ -53,3 +53,7 @@ class ProductManager {
 
 const productManager = new ProductManager();
 productManager.addProduct('Mouse Logitech G Pro X', '25600dpi, sensor optico', 100000, 'https://i0.wp.com/uranostream.com/wp-content/uploads/2024/02/40419_1-jpeg.webp?fit=900%2C900&ssl=1', 1, 6);
+productManager.addProduct('Teclado Kumara Redragon', 'Technicless RGB', 80000, 'https://http2.mlstatic.com/D_NQ_NP_652418-MLU72836481129_112023-O.webp', 2, 5);
+
+console.log(productManager.getProducts())
+console.log(productManager.getProductById(1))
